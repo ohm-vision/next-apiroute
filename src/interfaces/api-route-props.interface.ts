@@ -6,7 +6,7 @@ import { ILogger } from "./logger.interface";
 
 
 export interface ApiRouteProps<
-    TSessionSchema extends AnySchema<object> = never,
+    TSessionSchema extends AnySchema<object> = AnySchema,
     TParamsSchema extends AnySchema<object> = never,
     TSearchSchema extends AnySchema<object> = AnySchema<ResolvedSearchParams>,
     TBodySchema extends AnySchema = never,

@@ -1,6 +1,6 @@
 {
   "name": "@ohm-vision/next-apiroute",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrapper for NextJS App Router API routes",
   "author": "Ohm Vision, Inc",
   "license": "MIT",

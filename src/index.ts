@@ -66,20 +66,22 @@ export function ApiRoute<
         let res: Response;
         let error: Error;
         try {
-            const session = await readSession(req);
+            let session = await readSession(req);
+
+            if (session && sessionSchema) {
+                const result = validateSchema(session, sessionSchema, DEFAULT_VALIDATION_OPTIONS);
+
+                if (result instanceof ValidationError) {
+                    session = null;
+                    logDebug("INVALID_SESSION", result);
+                }
+            }
 
             throwIfAborted(req);
 
             if (secure) {
                 if (session == null) {
                     throw new HttpUnauthorizedError("NO_SESSION");
-                } else if (sessionSchema) {
-                    const result = validateSchema(session, sessionSchema, DEFAULT_VALIDATION_OPTIONS);
-
-                    if (result instanceof ValidationError) {
-                        log.debug("INVALID_SESSION", result);
-                        throw new HttpUnauthorizedError("INVALID_SESSION");
-                    }
                 }
             }
 
@@ -178,7 +180,7 @@ export function ApiRoute<
             const runtimeMs = new Date().getTime() - startAt;
     
             if (error == null) {
-                log.info("statusCode =", res.status, ", runtimeMs =", runtimeMs);
+                logInfo("statusCode =", res.status, ", runtimeMs =", runtimeMs);
             } else {
                 logError({
                     error: error,
