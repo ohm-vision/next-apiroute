@@ -7,6 +7,8 @@
 
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
+
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
@@ -26,12 +28,17 @@
     "url": "git+https://github.com/ohm-vision/next-js-app-apiroute.git"
   },
   "dependencies": {
-    "next": "^13 || ^14",
     "yup": "^1.4.0"
   },
+  "peerDependencies": {
+    "next": "^14 || ^15",
+    "react": "^18.2.0 || ^19.0.0-0"
+  },
   "devDependencies": {
+    "next": "14.2.3",
+    "react": "^18.2.0",
     "@types/node": "^22.5.4",
-    "next": "^14.2.4",
+    "@types/react": "^18.3.3",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.6"
   }
