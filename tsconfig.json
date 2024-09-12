@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "target": "ES5",
+      "outDir": "./dist",
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "module": "commonjs",
+      "declaration": true,
+      "noImplicitAny": false,
+      "noImplicitThis": true,
+      "strictNullChecks": false,
+      "paths": {
+        "@/*": [
+          "./*"
+        ]
+      }
+    },
+    "include": [
+      "src/**/*.ts",
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
+  

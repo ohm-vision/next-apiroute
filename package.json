@@ -1,0 +1,38 @@
+{
+  "name": "@ohm-vision/next-apiroute",
+  "version": "1.0.0",
+  "description": "Wrapper for NextJS App Router API routes",
+  "author": "Ohm Vision, Inc",
+  "license": "MIT",
+
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "next",
+    "nextjs",
+    "next.js",
+    "api",
+    "routehandler",
+    "routes",
+    "approuter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohm-vision/next-js-app-apiroute.git"
+  },
+  "dependencies": {
+    "next": "^13 || ^14",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "next": "^14.2.4",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.6"
+  }
+}
