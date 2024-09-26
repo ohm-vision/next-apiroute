@@ -1,6 +1,6 @@
 {
   "name": "@ohm-vision/next-apiroute",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wrapper for NextJS App Router API routes",
   "author": "Ohm Vision, Inc",
   "license": "MIT",
@@ -25,7 +25,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ohm-vision/next-js-app-apiroute.git"
+    "url": "git+https://github.com/ohm-vision/next-apiroute.git"
   },
   "dependencies": {
     "yup": "^1.4.0"

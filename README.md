@@ -3,7 +3,7 @@ Wrapper for NextJS App Router API routes
 
 This wrapper will perform standard basic validation and protection steps for your API routes to standardize your control flow
 
->> Note: This library works only for Next API's using the App Router (v13+)
+> Note: This library works only for Next API's using the App Router (v13+)
 
 [![npm version](https://badge.fury.io/js/@ohm-vision%2Fnext-apiroute.svg)](https://badge.fury.io/js/@ohm-vision%2Fnext-apiroute)
 
@@ -66,7 +66,7 @@ The props below outline how you can configure each request
 
 
 ### Example
-```
+```ts
 import { ApiRoute } from "@ohm-vision/next-apiroute";
 import { mixed, number, object, string, InferType, date, array } from "yup";
 
